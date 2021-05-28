@@ -21,6 +21,16 @@ async def on_message(message):
         await message.channel.send(Commands.commandList)
     elif message.content.startswith('!get CAD'):
         await message.channel.send('Here is the link to the CAD: https://ftc8404-ultimate-goal-robot-360.netlify.app/')
+    elif message.content.startswith('!get PALS'):
+        await message.channel.send('Here is the link to the PALS homepage: https://pals.quixilver8404.org/')
+    elif message.content.startswith('!get match scouting'):
+        await message.channel.send('Here is the link to the PALS match scouting page: https://pals.quixilver8404.org/match-scouting')
+    elif message.content.startswith('!get pregame scouting'):
+        await message.channel.send('Here is the link to the PALS pregame scouting page: https://pals.quixilver8404.org/pre-game-scouting')
+    elif message.content.startswith('!get competition overview'):
+        await message.channel.send('Here is the link to the PALS competition overview: https://pals.quixilver8404.org/competition-overview')
+    elif message.content.startswith('!get team info'):
+        await message.channel.send('Here is the link to the PALS team info: https://pals.quixilver8404.org/team-info')
     elif message.content.startswith('!get events'):
         data_string = events.getEventData()
         string = "The next team events are .... \n \n" + data_string
