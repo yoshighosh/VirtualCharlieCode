@@ -1,0 +1,1 @@
+commandList = "Here is a list of all of the current commands: \n\t**!hello** - Say hello to Charlie \n\t**!help** - Get commands list \n\t**!get CAD** - Get link to current CAD \n\t**!get events** - Get list of upcoming team events \n\t**!get past events** - Get list of past team events \n\t**!add event** - Adds an event \n\t**!remove event** - Removes an event"
