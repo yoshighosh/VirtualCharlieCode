@@ -17,6 +17,21 @@ def checkDate(eventDate):
   else: 
     return False
 
+def editEventData(eventName, edit, editData):
+  with open('Events.json') as fp:
+    events = json.load(fp)
+
+  for event in events:
+    if event["Event Name"] == eventName:
+      event[edit] = editData
+
+  with open('Events.json', 'w') as fp:
+    events = json.dump(events, fp)
+  
+
+
+
+
 def addEventData(eventData):
   with open("Events.json", "r+") as fp:
     events = json.load(fp)
@@ -35,11 +50,6 @@ def removeEventData(eventName):
   with open('Events.json', 'w') as fp:
     events = json.dump(events, fp) 
   
-
-    
-
-
-
 def getPastEventData():
   with open('Events.json') as fp:
     events = json.load(fp)
@@ -89,5 +99,3 @@ def getEventData():
     event_list += event_string 
     
   return event_list
-
-
