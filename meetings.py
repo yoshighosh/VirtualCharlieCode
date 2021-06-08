@@ -122,7 +122,7 @@ def startMeeting(meetingName):
   with open('Meetings.json') as fp:
     meetings = json.load(fp)
 
-  meeting_string = meetingName + " is now starting, please react with a 👍 if you are in attendance \n"
+  meeting_string = "@Member " + meetingName + " is now starting, please react with a 👍 if you are in attendance \n"
   for meeting in meetings:
     if meeting["Meeting Name"] == meetingName:
       for item in meeting:

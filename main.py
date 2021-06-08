@@ -139,11 +139,11 @@ async def on_message(message):
             if message.id == meetings.getMeetingID(meetingName.content):
               for reaction in message.reactions:
                 async for user in reaction.users():
-                    users += str(user) + ", "
+                    users += str(user.display_name) + ", "
         
-        #print(str(users))
+        print(str(users))
         
-        #meetings.editMeetingData(meetingName.content, "Attendance", users)
+        meetings.editMeetingData(meetingName.content, "Attendance", users)
 
         await message.channel.send('Your meeting has ended.')
         #await message.channel.send(meetings.endMeeting(meetingName.content))
