@@ -7,6 +7,7 @@ def checkDate(meetingDate):
   meetingDay = int(meetingDate[3:5])
   meetingYear = int(meetingDate[6:])
 
+
   if meetingDay == x.day and meetingMonth == x.month and meetingYear == x.year: return True
   elif meetingMonth > x.month and meetingYear >= x.year:
     return True
