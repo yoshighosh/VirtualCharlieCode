@@ -5,6 +5,7 @@ import meetings
 import Commands
 from keep_alive import keep_alive
 
+
 client = discord.Client()
 
 @client.event
