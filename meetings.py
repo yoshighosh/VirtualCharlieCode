@@ -1,8 +1,6 @@
 import json
 import datetime
 
-
-
 def checkDate(meetingDate):
   x = datetime.datetime.now()
   meetingMonth = int(meetingDate[0:2])
@@ -145,10 +143,14 @@ def addMeetingID(meetingName, meetingID):
   editMeetingData(meetingName, "Meeting ID", meetingID)
 
 def getMeetingID(meetingName):
+  
   with open('Meetings.json') as fp:
     meetings = json.load(fp)
-  
-  for meeting in meetings:
+
+  num_meetings = len(meetings)  
+
+  for index in range(num_meetings):
+    meeting = meetings[index]
     if meeting["Meeting Name"] == meetingName:
       return meeting["Meeting ID"]
 

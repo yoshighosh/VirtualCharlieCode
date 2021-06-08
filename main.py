@@ -140,7 +140,7 @@ async def on_message(message):
                 async for user in reaction.users():
                     users += str(user) + ", "
         
-        
+        #print(str(users))
         
         #meetings.editMeetingData(meetingName.content, "Attendance", users)
 
